@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROGCOV1.
+      ************************
+      * AREA DE COMENTÁRIOS - REMAKERS
+      * AUTHOR = DANIEL
+      * OBJETIVO: RECEBER NOME E SALÁRIO
+      * IMPRIMIR SALÁRIO FORMATADO - USO DA VÍRGULA
+      ************************
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+           DECIMAL-POINT IS COMMA.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       77 WRK-CPF    PIC X(11) VALUE ZEROS.
+       77 WRK-CPF-ED PIC ***.***.**9/99.
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           ACCEPT WRK-CPF.
+           MOVE WRK-CPF TO WRK-CPF-ED.
+           DISPLAY "CPF: " WRK-CPF-ED.
+
+       STOP RUN.

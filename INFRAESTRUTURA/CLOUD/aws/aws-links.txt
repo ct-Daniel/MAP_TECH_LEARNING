@@ -1,0 +1,6 @@
+LINK AWS PRINCIPAL
+https://aws.amazon.com/pt/certification/certification-prep/
+
+AWS Cloud Practitioner Essentials
+https://aws.amazon.com/pt/training/classroom/aws-cloud-practitioner-essentials/
+
