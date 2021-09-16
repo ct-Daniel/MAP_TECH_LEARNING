@@ -1,0 +1,56 @@
+pom.xml -> é o arquivo principal para configuração de um projeto com Maven. Nele conterá todas as informações
+de build, plugins e etc...
+
+===== CICLOS DE VIDA ( LIFECYCLE ) ====
+
+
+
+Existem 3 ciclos de vidas nos comandos do maven(os ciclos são: default, site e clean). 
+Cada ciclo de vida são divididos em fases:
+
+Default lifecycle:
+
+  - initialize: prepara o build configurando propriedades, criando diretórios e etc...
+  - process-resources: processa e copia os resources para o diretório das classes compiladas.
+  - compile: compila os códigos-fonte de teste.
+  - test: executa os testes e cria os relatórios.
+  - package: empacota os artefatos do build em um arquivo distribuível, como um Jar, por exemplo.
+  - install: salva no repositorio local(/home/username/.m2/repository) o arquivo distribuível 
+  gerado na fase package.
+
+Clean lifecycle::
+
+  - pre-clean: executa ações necessárias antes da limpeza do build anterior.
+  - clean: remove os artefatos gerados no build anterior.
+
+Site lifecycle:
+ - site: cria as páginas web e a documentação do projeto.
+ - site-deploy: faz o deploy(implantação) da documentação e das páginas web geradas na fase site em
+ um servidor.
+
+
+
+===== DIFERENÇA ENTRE OS COMANDOS =====
+
+COMANDOS DE FASE: uma fase é uma etapa do ciclo de vida de build, que é uma sequência ordenada de fases. 
+Quando uma fase é fornecida, o Maven executa todas as fases da sequência até 
+
+PRÉ-REQUISITOS
+
+1- INSTALAR O MAVEN
+  - Instalar e configurar o ambiente do java
+  - Fazer o download da pasta do maven
+  - Descompactar a pasta baixada
+  - Inserir as variáveis de ambientes do maven apontando para maven_path/bin
+	MAVEN_HOME: .../PATH/maven/
+	PATH: .../maven/bin/
+
+2- Crie uma estrutura (opcional)
+  - cli> mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart 
+  DarchetypeVersion=1.4 -DinteractiveMode=false
+
+  O comando acima gera uma estrutura de pastas prontas para 
+
+3- 
+
+
